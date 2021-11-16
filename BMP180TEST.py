@@ -15,16 +15,16 @@ bmp180 = BMP180(bus)
 bmp180.oversample_sett = 2
 bmp180.baseline = 101325
 
-while True:                                             #Setzt eine Schleife
+while True:                                              #Setzt eine Schleife
 
     temp = bmp180.temperature
     p = bmp180.pressure /100
     altitude = bmp180.altitude
 
-    print("\n\n")                                       #\n steht für Nächste zeile, somit macht er immer 2 Leerzeichen
-    print("Die Temperatur betraegt %d \u00b0C"%temp)    # \u00b0 Steht für ° , sonst macht er ein Fehler   %d als Ganz Zahl ausgeben, gibt Temperatur aus
+    print("\n\n")                                        #\n steht für Nächste zeile, somit macht er immer 2 Leerzeichen
+    print("Die Temperatur betraegt %d \u00b0C" %temp)    # \u00b0 Steht für ° , sonst macht er ein Fehler   %d als Ganz Zahl ausgeben, gibt Temperatur aus
 
-    print("Der Luftdruck betraegt %d hPa"%p)            # gibt Luftdruck aus
+    print("Der Luftdruck betraegt %d hPa" %p)            # gibt Luftdruck aus
     print("Hoehe %d m" %altitude)
 
-    time.sleep(10)                                      # Wartet 10s bis der Loop sich wiederholt
+    time.sleep(10)                                       # Wartet 10s bis der Loop sich wiederholt
